@@ -1,0 +1,5 @@
+clear;
+
+load('images.mat');
+
+for i = 1:
