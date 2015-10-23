@@ -1,7 +1,7 @@
 clear;
 
 load('images.mat');
-load('trans_estimated.mat');
+load('refined_trans.mat');
 load('rank.txt');
 
 n = 100;
@@ -13,7 +13,7 @@ pred_srocc = zeros(n,1);
 for i = 1:n
     scores = zeros(1,m);
     for j = 1:m
-        scores(j) = compute_condition_quality(Tr{i,1}, Tr{i,j+1});
+        scores(j) = compute_condition_quality(refined_Te{i,j+1});
     end
     [~, idx] = sort(scores);
     pred_rank(i,idx) = 1:m;
