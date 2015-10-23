@@ -25,7 +25,7 @@ for ind = 1:numpx
 %     ImVec(indices(ind),:)
 %     atmSum
 %     ImVec(indices(ind),:) + atmSum
-    atmSum = atmSum + ImVec(indices(ind),:);
+    atmSum = max(atmSum, ImVec(indices(ind),:));
 end
 
-A = atmSum / numpx;
+A = atmSum;

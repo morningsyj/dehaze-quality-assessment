@@ -13,6 +13,6 @@ for i = 1:n
     for j = 2:m
         T{i,j-1} = compute_mutual_transmission(double(images{i,1}),double(images{i,j}),A{i,j});
         fname = sprintf('../transmission/%d-%d.png', i, j-1);
-        imwrite(mean(T{i,j-1},3), fname);
+        imwrite(T{i,j-1});
     end
 end

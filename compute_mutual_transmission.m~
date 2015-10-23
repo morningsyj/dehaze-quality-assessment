@@ -1,0 +1,6 @@
+function T = compute_mutual_transmission(I, J, A)
+
+for i = 1:
+T = (A - I) ./ (A - J);
+
+end
